@@ -1,8 +1,5 @@
 ﻿
 
-/// <summary>
-/// Clase para encapsulamiento de cada atributo
-/// </summary>
 public class Usuario
 {
     private int nroDoc;

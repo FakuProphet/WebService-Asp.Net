@@ -1,7 +1,4 @@
-﻿
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Collections.Generic;
 using System.Web.Services;
 
 /// <summary>
@@ -30,9 +27,15 @@ public class WSGestionUsuarios : System.Web.Services.WebService
     [WebMethod]
     public List<Usuario> ListadoUsuarios()
     {
-        //UsuarioDAO usuarioDAO = new UsuarioDAO();
-        //DataSet SalidaDS = usuarioDAO.listadoUsuarios();
-        //return SalidaDS;
+        /*
+          
+        Retornando un DataSet o un List
+        
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        DataSet SalidaDS = usuarioDAO.listadoUsuarios();
+        return SalidaDS;
+
+        */
         UsuarioDAO usuarioDAO = new UsuarioDAO();
         List<Usuario> SalidaDS = usuarioDAO.ListaDeUsuarios();
         return SalidaDS;
