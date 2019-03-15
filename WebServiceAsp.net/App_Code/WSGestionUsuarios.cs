@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿
+using System.Collections;
+using System.Data;
 using System.Web.Services;
 
 /// <summary>
@@ -25,6 +24,14 @@ public class WSGestionUsuarios : System.Web.Services.WebService
     public string HelloWorld()
     {
         return "Hola a todos";
+    }
+
+    [WebMethod]
+    public DataSet ListadoUsuarios()
+    {
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        DataSet SalidaDS = usuarioDAO.listadoUsuarios();
+        return SalidaDS;
     }
 
 }
