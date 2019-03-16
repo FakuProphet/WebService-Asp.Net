@@ -43,7 +43,11 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebConsumoWS", "WebConsumoW
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "49885"
+		SlnRelativePath = "WebConsumoWS\"
 		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{0FAA3177-2121-4D2E-8A4B-460CD49E8617} = {0FAA3177-2121-4D2E-8A4B-460CD49E8617}
 	EndProjectSection
 EndProject
 Global
