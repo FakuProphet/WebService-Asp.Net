@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Collections.Generic;
-using WSGestionUsuarios;
-using System.Collections;
 
 public partial class principal : System.Web.UI.Page
 {
@@ -19,53 +17,6 @@ public partial class principal : System.Web.UI.Page
         GridView1.DataSource = ws.ListadoUsuarios();
         GridView1.DataBind();
     }
-
-
-    //public DataTable ToDataTable<T>(this IList<T> data)
-    //{
-    //    PropertyDescriptorCollection props = TypeDescriptor.GetProperties(typeof(T));
-    //    object[] values = new object[props.Count];
-    //    using (DataTable table = new DataTable())
-    //    {
-    //        long _pCt = props.Count;
-    //        for (int i = 0; i < _pCt; ++i)
-    //        {
-    //            PropertyDescriptor prop = props[i];
-    //            table.Columns.Add(prop.Name, prop.PropertyType);
-    //        }
-    //        foreach (T item in data)
-    //        {
-    //            long _vCt = values.Length;
-    //            for (int i = 0; i < _vCt; ++i)
-    //            {
-    //                values[i] = props[i].GetValue(item);
-    //            }
-    //            table.Rows.Add(values);
-    //        }
-    //        return table;
-    //    }
-    //}
-    //public DataTable ConvertToDataTable<T>(IList<T> data)
-    //{
-    //    PropertyDescriptorCollection propiedades = TypeDescriptor.GetProperties(typeof(T));
-    //    DataTable table = new DataTable();
-
-    //    foreach (PropertyDescriptor prop in propiedades)
-    //    {
-    //        table.Columns.Add(prop.Name, Nullable.GetUnderlyingType(prop.PropertyType) ?? rop.PropertyType);
-    //    }
-    //    foreach (T item in data)
-    //    {
-    //        DataRow row = table.NewRow();
-    //        foreach (PropertyDescriptor prop in properties)
-    //        {
-    //            row[prop.Name] = prop.GetValue(item) ?? DBNull.Value;
-    //        }
-    //        table.Rows.Add(row);
-    //    }
-    //    return table;
-
-    //}
 
 
     static DataTable ConvertListToDataTable(List<string[]> list)
