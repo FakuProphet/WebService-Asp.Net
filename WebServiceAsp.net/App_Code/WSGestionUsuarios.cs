@@ -37,8 +37,16 @@ public class WSGestionUsuarios : System.Web.Services.WebService
 
         */
         UsuarioDAO usuarioDAO = new UsuarioDAO();
-        List<Usuario> SalidaDS = usuarioDAO.ListaDeUsuarios();
-        return SalidaDS;
+        List<Usuario> Salida = usuarioDAO.ListaDeUsuarios();
+        return Salida;
+    }
+
+    [WebMethod]
+    public List<Usuario> BuscarPorNivel(int nivel)
+    {
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        List<Usuario> Salida = usuarioDAO.GetListaUsuariosPorNivel(nivel);
+        return Salida;
     }
 
 }

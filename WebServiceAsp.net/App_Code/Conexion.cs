@@ -3,7 +3,7 @@ using System;
 
 class Conexion
 {
-    static string cadena = "Server=localhost;Port=3306;Database=WS;Uid=root;Pwd=;";
+    static string cadena = "Server=localhost;Port=3306;Database=ws;Uid=root;Pwd=;";
 
 
     public static string pCadena
